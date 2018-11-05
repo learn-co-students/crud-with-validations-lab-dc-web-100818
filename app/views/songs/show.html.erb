@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Show</title>
+</head>
+<body>
+  <p>Song Title: <%= @song.title %></p>
+  <p>Release_year: <%= @song.release_year %></p>
+  <p>Released: <%= @song.released %></p>
+  <p>Genre: <%= @song.genre %></p>
+  <p>Artist Name:<%= @song.artist_name %></p>
+
+  <%= form_tag song_path(@song), method: "delete" do %>
+    <%= submit_tag "Delete #{@song.title}" %>
+  <% end %>
+
+</body>
+</html>
